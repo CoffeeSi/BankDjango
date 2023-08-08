@@ -1,0 +1,19 @@
+{% extends 'cash/base.html' %}
+{% load static %}
+
+{% block title_block %}{{ title }}{% endblock title_block %}
+
+{% block main %}
+<div class="main-container">
+    <form action='/transfer_money/' method="post">
+        {% csrf_token %}
+        {{ form }}
+        {% comment %} <input class="input-card" type="tel" placeholder="Номер счёта" size="18"
+        maxlength="8"> {% endcomment %}
+        {% comment %} <input class="input-money" type="tel" placeholder="Сумма" size="18"
+        maxlength="8"> {% endcomment %}
+        <input class="btn-deposite" type="submit" value="Перевести">
+    </form>
+    
+</div>
+{% endblock main %}

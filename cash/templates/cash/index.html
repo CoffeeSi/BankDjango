@@ -1,0 +1,42 @@
+{% extends 'cash/base.html' %}
+{% load static %}
+
+{% block title_block %}{{ title }}{% endblock title_block %}
+
+{% block main %}
+<div class="main-container">
+    <h1>Сервисы</h1>
+    <div class="ind-long-operations-container">
+        <a href="" class="ind-long-operations-sections" id="ind-long-section-1">
+            <div class="ind-section-item-top">
+                <h3>Открыть банковский счёт</h3>
+                <span>Легко и удобно: начните свой бизнес прямо сейчас.<br>Откройте счёт 
+                    онлайн и начните управлять финансами с легкостью, не покидая дома.</span>
+            </div>
+            
+        </a>
+        <a href="{% url 'deposite' %}" class="ind-long-operations-sections" id="ind-long-section-2">
+            <div class="ind-section-item-top">
+                <h3>Пополнить</h3>
+                <span>Пополняйте баланс легко и просто.<br>Наш сервис поможет вам 
+                    пополнить счёт в пару кликов, где бы вы ни находились.</span>
+            </div>
+        </a>
+        <a href="{% url 'transfer' %}" class="ind-long-operations-sections" id="ind-long-section-3">
+            <div class="ind-section-item-top">
+                <h3>Переводы</h3>
+                <span>Легко отправляйте деньги в любую точку мира.<br>
+                    Наш сервис переводов позволит вам быстро и безопасно 
+                    осуществлять финансовые транзакции, делая мир ближе.</span>
+            </div>
+        </a>
+    </div>
+    <div class="ind-short-operations-container">
+        <div class="ind-short-sections-list">
+            <a href="" class="ind-short-sections-link">Счёт</a>
+            <a href="" class="ind-short-sections-link">Переводы</a>
+            <a href="" class="ind-short-sections-link">Пополнить</a>
+        </div>
+    </div>
+</div>
+{% endblock main %}

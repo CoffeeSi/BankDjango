@@ -1,0 +1,34 @@
+
+{% extends 'cash/base.html' %}
+{% load static %}
+
+{% block title_block %}{{ title }}{% endblock title_block %}
+
+{% block main %}
+<div class="main-container">
+    <div class="bk-card-main-container">
+        <div class="bk-balance-container">
+            <div class="bk-balance-section">
+                <div class="bk-balance-section-header">
+                    <span>Баланс</span>
+                    <div class="visa-image">
+                        <img src="https://pluspng.com/img-png/png-visa-visa-icon-1600.png">
+                    </div>
+                </div>
+                <h3>{{ card.money }} USD</h3>
+            </div>
+        </div>
+        <div class="bk-action-container">
+            <div class="bk-operation-section">
+                <div class="bk-operation-section-header">
+                    <span>Операции</span>
+                </div>
+                <div class="bk-operation-section-main">
+                    <a href="{% url 'deposite' %}">Перевести</a>
+                    <a href="{% url 'transfer' %}">Пополнить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

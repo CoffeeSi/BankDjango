@@ -1,0 +1,12 @@
+{% extends 'cash/base.html' %}
+{% load static %}
+
+{% block title_block %}{{ title }}{% endblock title_block %}
+
+{% block main %}
+<div class="main-container">
+    <input class="input-money" type="tel" placeholder="Номер счёта" size="18"
+    maxlength="8" value="{{ cardid.card }}">
+    <a class="btn-deposite" href="">Пополнить</a>
+</div>
+{% endblock main %}
